@@ -1,30 +1,33 @@
-// [Cambio Signif. #4] Implementación de validación simple
 document.getElementById('contacto-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío por defecto del formulario
+    event.preventDefault();
 
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
+    const nombre = document.getElementById('nombre').value.trim(); 
+    const email = document.getElementById('email').value.trim();
     const feedback = document.getElementById('mensaje-feedback');
 
-    // Validación: verifica si el campo nombre está vacío o solo contiene espacios
-    if (nombre.trim() === '') {
-        // [Cambio Signif. #4] Lógica para manejar error
-        feedback.textContent = 'El campo Nombre es obligatorio.';
-        feedback.style.color = 'red';
+    // Validación
+    if (nombre === '' || email === '') { 
+        feedback.textContent = 'ERROR: Todos los campos son obligatorios.';
+        feedback.style.color = '#e74c3c'; // Rojo para error
         return; 
     }
 
-    // Validación: verifica si el campo email está vacío
-    if (email.trim() === '') {
-        // [Cambio Signif. #4] Lógica para manejar error
-        feedback.textContent = 'El campo Correo Electrónico es obligatorio.';
-        feedback.style.color = 'red';
-        return;
-    }
+    // CAMBIO SIGNIFICATIVO: Flujo de UI al tener éxito
+    
+    // 1. Ocultar el formulario
+    document.getElementById('contacto-form').style.display = 'none';
 
-    // Si ambas validaciones pasan:
-    // [Cambio Signif. #4] Lógica para manejar éxito
-    feedback.textContent = '¡Mensaje enviado con éxito!';
-    feedback.style.color = 'green';
-    document.getElementById('contacto-form').reset(); // Limpia el formulario
+    // 2. Mostrar un mensaje de éxito grande y visible
+    const mainContainer = document.querySelector('main');
+    const successDiv = document.createElement('div');
+    successDiv.className = 'success-message';
+    successDiv.textContent = `¡Gracias, ${nombre}! Tu mensaje ha sido enviado.`;
+    
+    // Aseguramos que el mensaje no se duplique si se intenta enviar de nuevo (aunque el form está oculto)
+    if (!document.querySelector('.success-message')) {
+        mainContainer.appendChild(successDiv);
+    }
+    
+    // 3. Limpiar el feedback anterior
+    feedback.textContent = '';
 });
