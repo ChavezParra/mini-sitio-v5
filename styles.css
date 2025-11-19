@@ -1,16 +1,14 @@
-/* CAMBIO SIGNIFICATIVO EN ESTILOS: Tema Oscuro y Vibrante */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Fondo oscuro notorio */
+   
     background-color: #F5276C; 
-    color: #ecf0f1; /* Texto claro */
+    color: #ecf0f1;
     margin: 0;
     padding: 30px;
     text-align: center;
 }
 
 header {
-    /* Color de encabezado que contraste */
     background-color: #0000FF; 
     color: white;
     padding: 20px;
@@ -19,17 +17,15 @@ header {
 }
 
 h1, h2 {
-    color: #bdc3c7; /* Títulos llamativos */
+    color: #bdc3c7; 
 }
 
 main {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #133f6b; /* Contenedor oscuro */
+    background-color: #133f6b; 
     padding: 30px;
     border-radius: 12px;
-    
-    /* Borde y sombra prominente */
     border: 5px solid #2ecc71; 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
 }
@@ -56,7 +52,6 @@ input[type="text"], input[type="email"] {
     color: #ecf0f1;
 }
 
-/* Estilo de componente: Botón totalmente distinto */
 #btn-enviar {
     background-color: #C0C0C0; 
     color: #2c3e50;
@@ -73,11 +68,11 @@ input[type="text"], input[type="email"] {
     transform: translateY(-2px);
 }
 
-/* Estilo para el mensaje de éxito notorio (será manejado por JS) */
+
 .success-message {
     color: #2ecc71;
     font-size: 2em;
     font-weight: bold;
     margin-top: 50px;
-    display: none; /* Inicialmente oculto */
+    display: none; 
 }
