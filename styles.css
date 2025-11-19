@@ -1,6 +1,8 @@
+/* nit: Estilos principales del Mini-Sitio | Tema Personalizado */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+    
+    /* Tu color personalizado */
     background-color: #F5276C; 
     color: #ecf0f1;
     margin: 0;
@@ -9,6 +11,7 @@ body {
 }
 
 header {
+    /* Tu color personalizado */
     background-color: #0000FF; 
     color: white;
     padding: 20px;
@@ -17,13 +20,15 @@ header {
 }
 
 h1, h2 {
+    /* Tu color personalizado */
     color: #bdc3c7; 
 }
 
 main {
-    max-width: 600px;
+    /* suggestion fix: Cambiado a 40rem para mejor accesibilidad (en lugar de 600px) */
+    max-width: 40rem;
     margin: 0 auto;
-    background-color: #133f6b; 
+    background-color: #133f6b; /* Tu color personalizado */
     padding: 30px;
     border-radius: 12px;
     border: 5px solid #2ecc71; 
@@ -53,6 +58,7 @@ input[type="text"], input[type="email"] {
 }
 
 #btn-enviar {
+    /* Tu color personalizado */
     background-color: #C0C0C0; 
     color: #2c3e50;
     font-weight: bold;
@@ -64,6 +70,7 @@ input[type="text"], input[type="email"] {
 }
 
 #btn-enviar:hover {
+    /* Tu color personalizado */
     background-color: #49ced8;
     transform: translateY(-2px);
 }

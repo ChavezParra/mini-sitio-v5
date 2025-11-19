@@ -1,7 +1,7 @@
 document.getElementById('contacto-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío por defecto del formulario
 
-    // [Suggestion implementada: Se aplica .trim() para limpiar espacios en blanco]
+    // Aplicación de .trim() para limpieza de datos
     const nombre = document.getElementById('nombre').value.trim(); 
     const email = document.getElementById('email').value.trim();
 
@@ -30,7 +30,7 @@ document.getElementById('contacto-form').addEventListener('submit', function(eve
     }
     // --- Fin de la validación ---
 
-    // --- 3. [CAMBIO SIGNIFICATIVO]: Flujo de UI al tener éxito ---
+    // --- 3. Flujo de UI al tener éxito ---
     
     // Ocultar el formulario
     document.getElementById('contacto-form').style.display = 'none';
