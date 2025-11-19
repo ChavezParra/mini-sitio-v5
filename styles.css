@@ -1,0 +1,85 @@
+/* nit: Estilos principales del Mini-Sitio | Tema Personalizado */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Tu color personalizado */
+    background-color: #F5276C; 
+    color: #ecf0f1;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+}
+
+header {
+    /* Tu color personalizado */
+    background-color: #0000FF; 
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    /* Tu color personalizado */
+    color: #bdc3c7; 
+}
+
+main {
+    /* suggestion fix: Cambiado a 40rem para mejor accesibilidad (en lugar de 600px) */
+    max-width: 40rem;
+    margin: 0 auto;
+    background-color: #133f6b; /* Tu color personalizado */
+    padding: 30px;
+    border-radius: 12px;
+    border: 5px solid #2ecc71; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.campo {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #bdc3c7;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #7f8c8d;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+#btn-enviar {
+    /* Tu color personalizado */
+    background-color: #C0C0C0; 
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#btn-enviar:hover {
+    /* Tu color personalizado */
+    background-color: #49ced8;
+    transform: translateY(-2px);
+}
+
+
+.success-message {
+    color: #2ecc71;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 50px;
+    display: none; 
+}
